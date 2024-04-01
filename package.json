@@ -1,0 +1,17 @@
+{
+  "name": "exercism-azure-httpyac",
+  "version": "1.0.0",
+  "description": "API tests by httpYac for Exercism functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "httpyac ./**/*.http --all --env azure --output short"
+  },
+  "keywords": [
+    "httpyac", "api", "exercism"
+  ],
+  "author": "Jegors Čemisovs. <jegors_cemisovs@epam.com>",
+  "license": "MIT",
+  "dependencies": {
+    "httpyac": "^6.12.1"
+  }
+}
