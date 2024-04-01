@@ -10,10 +10,14 @@
 }}
 /api/roman-numerals?number={{testCase.number}}
 ?? status == 200
+?? header content-type includes json
+?? body roman exists
+?? body roman isString
 ?? body roman == {{testCase.expected}}
 
 ### Error when number is not specified
 /api/roman-numerals
 ?? status == 400
+?? header content-type includes json
 ?? body message exists
 ?? body message equals Please pass a number on the query string
