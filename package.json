@@ -4,7 +4,8 @@
   "description": "API tests by httpYac for Exercism functions",
   "main": "index.js",
   "scripts": {
-    "test": "httpyac ./**/*.http --all --env azure --output short"
+    "test": "httpyac ./**/*.http --all --env azure --output short",
+    "api-test": "httpyac ./**/*.http --all --env azure --no-color --junit > report.xml"
   },
   "keywords": [
     "httpyac", "api", "exercism"
