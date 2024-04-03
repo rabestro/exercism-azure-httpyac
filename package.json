@@ -4,15 +4,18 @@
   "description": "API tests by httpYac for Exercism functions",
   "main": "index.js",
   "scripts": {
-    "test": "httpyac ./**/*.http --all --env azure --output short",
+    "test": "httpyac './exercism-api-tests/**/*.http' --all --env azure --output short",
     "api-test": "httpyac ./**/*.http --all --env azure --no-color --junit > report.xml"
   },
   "keywords": [
-    "httpyac", "api", "exercism"
+    "httpyac",
+    "api",
+    "exercism"
   ],
   "author": "Jegors Čemisovs. <jegors_cemisovs@epam.com>",
   "license": "MIT",
   "dependencies": {
-    "httpyac": "^6.12.1"
+    "httpyac": "^6.12.1",
+    "node-fetch": "^2.6.6"
   }
 }
