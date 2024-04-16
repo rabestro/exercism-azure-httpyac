@@ -1,0 +1,3 @@
+GET {{host}}/api/darts-score?x=3&y=7
+
+

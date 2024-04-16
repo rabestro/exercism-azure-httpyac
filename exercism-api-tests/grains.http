@@ -1,0 +1,5 @@
+GET {{host}}/api/grains
+
+###
+GET {{host}}/api/grains?square=5
+
