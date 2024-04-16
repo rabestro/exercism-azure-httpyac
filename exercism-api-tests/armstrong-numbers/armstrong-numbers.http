@@ -20,8 +20,7 @@
 @number = {{testCase[1]}}
 @expected = {{testCase[2]}}
 
-/api/armstrong-numbers
-    ?number={{number}}
+/api/armstrong-numbers/{{number}}
 
 ?? status == 200
 ?? header content-type includes json

@@ -1,17 +1,16 @@
-@url = https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/space-age/canonical-data.json
+@url = {{REPOSITORY}}/space-age/canonical-data.json
 {{
     const fetch = require('node-fetch');
     const response = await fetch(url);
     const jsonData = await response.json();
     exports.testData = jsonData.cases.filter(testCase => typeof testCase.expected !== 'object');
 }}
-
 ### Return age on the planet
 # @loop for testCase of testData
 {{
     httpRegion.metaData.title = testCase.description
 }}
-/api/space-age
+GET {{host}}/api/space-age
     ?seconds={{testCase.input.seconds}}
     &planet={{testCase.input.planet}}
 

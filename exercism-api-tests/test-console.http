@@ -1,0 +1,18 @@
+{{
+    console.info(httpFile);
+}}
+
+###
+# @loop for 1
+{{
+    console.info('Before requests');
+}}
+GET https://httpbin.org/json
+?? status == 200
+{{
+    console.info('After requests');
+}}
+###
+{{
+    console.info('Empty request region');
+}}
