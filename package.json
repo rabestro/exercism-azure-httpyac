@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "httpyac './exercism-api-tests/**/*.http' --all --env azure --output short",
-    "api-test": "httpyac ./**/*.http --all --env azure --no-color --junit > report.xml"
+    "api-test": "httpyac ./**/*.http --all --env azure --no-color --junit > report.xml",
+    "change": "httpyac ./**/change.http --all --env azure --no-color --junit > report.xml"
   },
   "keywords": [
     "httpyac",
