@@ -16,7 +16,7 @@
   "author": "Jegors Čemisovs. <jegors_cemisovs@epam.com>",
   "license": "MIT",
   "dependencies": {
-    "httpyac": "^6.12.1",
-    "node-fetch": "^2.6.6"
+    "httpyac": "^6.13.1",
+    "node-fetch": "3.2.10"
   }
 }
