@@ -1,11 +1,12 @@
 {
   "name": "exercism-azure-httpyac",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API tests by httpYac for Exercism functions",
   "main": "index.js",
   "scripts": {
     "test": "httpyac './exercism-api-tests/**/*.http' --all --env azure --output short",
     "api-test": "httpyac ./**/*.http --all --env azure --no-color --junit > report.xml",
+    "test-change": "httpyac ./**/change.http --all --env azure --output short",
     "change": "httpyac ./**/change.http --all --env azure --no-color --junit > report.xml"
   },
   "keywords": [
@@ -13,10 +14,10 @@
     "api",
     "exercism"
   ],
-  "author": "Jegors Čemisovs. <jegors_cemisovs@epam.com>",
+  "author": "Jegors Čemisovs. <jegors.cemisovs@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "httpyac": "^6.13.1",
-    "node-fetch": "3.2.10"
+    "httpyac": "^6.16.4",
+    "node-fetch": "3.3.2"
   }
 }

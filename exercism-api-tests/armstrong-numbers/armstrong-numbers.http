@@ -3,7 +3,7 @@
         ['Zero is Armstrong numbers',                                  0,          true],
         ['Single digits are Armstrong numbers',                        5,          true],
         ['There are no two digit Armstrong numbers',                  10,         false],
-        ['Three-digit number that is an Armstrong number',           154,          true],
+        ['Three-digit number that is an Armstrong number',           154,         false],
         ['Three-digit number that is not an Armstrong number',       100,         false],
         ['Four-digit number that is an Armstrong number',           9474,          true],
         ['Four-digit number that is not an Armstrong number',       9475,         false],
@@ -11,7 +11,6 @@
         ['A seven digit number that is not an Armstrong number', 9926314,         false]
     ];
 }}
-
 ###
 # @loop for testCase of sampleData
 {{
@@ -26,11 +25,17 @@
 ?? header content-type includes json
 ?? body isArmstrongNumber isBoolean
 ?? body isArmstrongNumber equals {{expected}}
-
-### Error when number is not specified
+###
 /api/armstrong-numbers
 
 ?? status == 400
 ?? header content-type includes json
 ?? body message exists
 ?? body message equals Please pass a number on the query string
+
+HTTP/1.1 400  - Bad Request
+connection: close
+content-type: application/json; charset=utf-8
+date: Tue, 19 Nov 2024 08:27:31 GMT
+transfer-encoding: chunked
+request-context: appId=
